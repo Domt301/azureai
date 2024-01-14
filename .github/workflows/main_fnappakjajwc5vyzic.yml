@@ -89,5 +89,5 @@ jobs:
 
       - name: Disable WEBSITE_RUN_FROM_PACKAGE
         run: |
-            az functionapp config appsettings set --name fnappakjajwc5vyzic --resource-group exampleRG --settings WEBSITE_RUN_FROM_PACKAGE=0
+          az functionapp config appsettings delete --name fnappakjajwc5vyzic --resource-group exampleRG --setting-names WEBSITE_RUN_FROM_PACKAGE
 
