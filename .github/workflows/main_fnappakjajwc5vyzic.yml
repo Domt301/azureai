@@ -17,6 +17,9 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
