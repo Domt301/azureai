@@ -20,6 +20,7 @@ def HttpExample(req: func.HttpRequest) -> func.HttpResponse:
             pass
         else:
             prompt = req_body.get('prompt')
+            # minor change
 
     if name:
         return func.HttpResponse(f"Hello, {name}. This HTTP triggered function executed successfully.")
