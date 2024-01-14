@@ -19,7 +19,7 @@ def HttpExample(req: func.HttpRequest) -> func.HttpResponse:
         except ValueError:
             pass
         else:
-            name = req_body.get('name')
+            # name = req_body.get('name')
             prompt = req_body.get('prompt')
 
     if name:
