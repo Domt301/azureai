@@ -87,12 +87,3 @@ jobs:
           scm-do-build-during-deployment: true
           enable-oryx-build: true
 
-      - name: Remove WEBSITE_RUN_FROM_PACKAGE Setting
-        run: |
-            az login --service-principal -u ${{ secrets.AZURE_CLIENT_ID }} -p ${{ secrets.AZURE_CLIENT_SECRET }} --tenant ${{ secrets.AZURE_TENANT_ID }}
-            az functionapp config appsettings delete --name fnappakjajwc5vyzic --resource-group <YourResourceGroupName> --setting-names WEBSITE_RUN_FROM_PACKAGE
-        env:
-          AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
-          AZURE_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
-          AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
-          
